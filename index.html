@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-selector">
+        <select id="theme-select">
+            <option value="default">Default Theme</option>
+            <option value="dark">Dark Mode</option>
+            <option value="peach">Peach</option>
+            <option value="space">Space</option>
+            <option value="mono-blue">Monochrome Blue</option>
+            <option value="mono-green">Monochrome Green</option>
+            <option value="mono-purple">Monochrome Purple</option>
+            <option value="neon">Neon</option>
+        </select>
+    </div>
+    <h1>♠️ Blackjack ♥️</h1>
+    <div class="game-container">
+        <div id="dealer-hand" class="hand">
+            <h2>Dealer's Hand: <span id="dealer-score">0</span></h2>
+        </div>
+        <div id="player-hand" class="hand">
+            <h2>Your Hand: <span id="player-score">0</span></h2>
+        </div>
+        <div class="betting-area">
+            <div class="bank">
+                Bank: $<span id="bank-amount" class="bank-amount">1000</span>
+            </div>
+            <div class="current-bet">
+                Current Bet: $<span id="bet-amount" class="bet-amount">0</span>
+            </div>
+            <div class="chips-rack">
+                <div class="chip" data-value="5"></div>
+                <div class="chip" data-value="25"></div>
+                <div class="chip" data-value="50"></div>
+                <div class="chip" data-value="100"></div>
+            </div>
+            <div class="betting-controls">
+                <button id="clear-bet-button">Clear Bet</button>
+                <button id="deal-button" disabled>Deal</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="hit-button" disabled>Hit</button>
+            <button id="stand-button" disabled>Stand</button>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
